@@ -13,11 +13,10 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-top">
-        <!-- Replace with your actual image file in /assets -->
         <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Tess Ivinjack" />
 
         <h1 class="name">Tess Ivinjack</h1>
-        <p class="tagline">Data scientist passionate about creativity, communication, and real-world impact.</p>
+        <p class="tagline">Data scientist passionate about creativity, communication, and real-world impact</p>
 
         <h2 class="sidebar-title">Outline</h2>
         <nav class="nav">
@@ -34,8 +33,7 @@
       </div>
 
       <div class="sidebar-bottom">
-        <!-- Replace with your real LinkedIn -->
-        <a class="link" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noreferrer">
+        <a class="link" href="https://www.linkedin.com/in/tess-ivinjack/" target="_blank" rel="noreferrer">
           LinkedIn
         </a>
         <!-- Optional: add email/GitHub later -->
@@ -49,25 +47,24 @@
         <h2 class="page-title">A little about me</h2>
 
         <p>
-          Hi! I’m Tess Ivinjack — a recent UCSB graduate with a B.S. in Statistics &amp; Data Science.
-          Welcome to my portfolio.
+          Hello! My name is Tess Ivinjack, and I'm a recent graduate of UCSB with a B.S. in Statistics & Data Science. Welcome to my portfolio!
         </p>
 
         <p>
-          Across my projects, you’ll notice a few recurring themes. I’m especially interested in exploring the
-          intersection of data, AI, and creativity, with a focus on areas like music, language, and emerging
-          technologies. I’m most excited by opportunities where I can use data to solve real-world problems
-          while continuing to grow as a creative thinker and collaborator.
+          Across my projects, you’ll notice a few recurring themes. I have a strong interest in exploring the intersection of 
+          data, AI, and creativity more deeply - particularly in areas like music, language, and emerging technologies. 
+          I'm especially excited about opportunities where I get to solve real world problems with data and continue growing 
+          as a creative thinker and collaborator. 
         </p>
 
         <p>
-          I’m also drawn to the communication side of data science — explaining concepts clearly, building
-          intuitive visualizations, and turning complex information into something approachable and actionable.
-          I love learning, meeting new people, and staying open to new paths as I build new skills along the way.
+          I’ve also found that I really enjoy the communication side of data science - explaining concepts clearly, creating visualizations, 
+          and making peoples lives and decisions easier by turning complex information into something approachable and actionable. 
+          I love learning and meeting new people, and I'm always open to discovering new paths and building new skills along the way!
         </p>
 
         <p>
-          Outside of data, other things I love include peanut butter, movies, the color yellow, and dance :)
+          Outside of data, other things I love include peanut butter, movies, the color yellow, and dancing :)
         </p>
       </section>
 
@@ -114,33 +111,45 @@
 
         <h3>Context</h3>
         <p>
-          <!-- Paste your finalized writeup text here -->
-          Question: Given a song, is it AI-generated or authentic? That was the question my capstone group
-          tried to answer by building a detection model for our year-long project.
+          Question: Given a song, is it AI-generated or authentic? That was the question my capstone group tried to 
+          answer by building a detection model for our year long project.
+        </p>
+        
+        <p>
+          In the age of AI, there is the rising issue of artist deepfakes, voice cloning, and gray areas with copyright laws. 
+          We need to protect artist rights by making it easier to distinguish between AI and human produced music. 
+          This is the motivation behind our detection model.
         </p>
 
         <h3>Approach</h3>
         <p>
-          <!-- Paste your finalized approach here -->
-          After reading research papers, we found generalization was a key challenge and expanded our dataset
-          by generating additional music from multiple generators, then fine-tuned a classifier from scratch.
+          The biggest issues we found after reading research papers was generalization: the detection model could only 
+          correctly classify AI generated music as AI if it was trained on that generator. If it was given an AI generated 
+          audio file that was produced by an AI music generator it was not trained on, then it almost always thought it was real.
+        </p>
+
+        <p>
+          After reading research papers, we decided that instead of building a classifier from scratch, we would fine tune 
+          the SONICS model. We obtained and pre-processed AI generated music from additional generators, and fine tuned the 
+          open source SONICS model on the expanded data.
         </p>
 
         <h3>Results</h3>
         <p>
-          <!-- Paste your results here -->
-          Our generalized model improved substantially over the original baseline and performed well on
-          previously unseen generators.
+          Our generalized model correctly classified the song with an <b></b>accuracy of 86.8%</b>, which is a big improvement 
+          from the original model’s 18.4% accuracy.
         </p>
 
         <h3>Next Steps</h3>
         <ul>
-          <li>Continue expanding the dataset to improve generalization.</li>
-          <li>Explore finer-grained detection (e.g., identifying AI-generated segments).</li>
-          <li>Deploy the classifier for broader use by artists and platforms.</li>
+          <li>Continue expanding the data so that the model can be exposed to and learn more about different generators</li>
+          <li>Be able to detect which parts of a song are AI generated</li>
+          <ul>
+            <li>Maybe just the vocals are AI, or just the backing track</li>
+          </ul>
+          <li>Deploy our generalized model so that artists and general public can run detection</li>
         </ul>
 
-        <!-- Replace with your image(s) in assets/ -->
         <div class="media">
           <img src="assets/project-images/sound-ethics-poster.png" alt="Sound Ethics project poster" />
         </div>
@@ -152,34 +161,47 @@
 
         <h3>Context</h3>
         <p>
-          <!-- Paste your context here -->
-          People have different tastes, and you don’t know whether a movie is “good” until you watch it.
-          This project focused on recommending similar movies based on what a user already likes.
+          There’s nothing better than watching a really good movie, but good is going to mean something different to everybody. 
+          Personally, I love weird movies, horror movies, and musical movies, but I know that that isn’t the case for everyone. 
+        </p>
+
+        <p>
+          Deciding what to watch is arguably one of the worst parts of watching a movie: how can I find something I will like 
+          that is good and available for me to watch? This movie recommender system is the answer to all of those questions.
         </p>
 
         <h3>Approach</h3>
         <p>
-          <!-- Paste your approach here -->
-          Using data from the TMDb API, we built a hybrid system: content-based recommendations for cold-start
-          movies and collaborative filtering for movies with reviews.
+          Using data from the TMDb (The Movie Database) API, we obtained two dataframes: one with information about the content 
+          of a movie (genre, cast, director, etc.), and one with information about user reviews (user rating, user ID, movie ID).
+        </p>
+
+        <p>
+          This system follows a hybrid approach using the cascade method, so given a movie that the user likes, 
+          it will narrow it down to the top 100 movies that are most similar in content. From there, if movie review data is 
+          available for that title, it will recommend the top 10 films based on what other users similar to them also liked. 
+          (And we included where you can stream each movie to make the decision a little easier!)
         </p>
 
         <h3>Results</h3>
         <p>
-          <!-- Paste your results here -->
-          The system produced reasonable recommendations in qualitative tests, and the hybrid approach helped
-          address the cold-start problem.
+          While it is hard to evaluate whether or not a set of recommendations is good or not, 
+          as a movie lover myself, I would say these suggestions are fairly accurate, given the expanse of the data.
         </p>
+
+        <div class="media">
+          <img src="assets/project-images/movie-recs.png" alt="Top 10 Movie Recommendations for 'The Gorge'" />
+        </div>
 
         <h3>Next Steps</h3>
         <ul>
-          <li>Incorporate additional content signals (e.g., production companies, keywords).</li>
-          <li>Expand review coverage by integrating additional sources.</li>
-          <li>Refine feature weighting and evaluate with user feedback.</li>
+          <li>Incorporate more content features such as production companies, budget, etc.</li>
+          <li>Expand data to include more reviews for each movies, and get reviews from multiple sources (Rotten Tomatoes, Letterboxd, Roger Ebert, etc.)</li>
+          <li>Refine feature weights so that certain features are taken more into account than others</li>
         </ul>
 
         <p class="small">
-          GitHub repo: <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noreferrer">link</a>
+          GitHub repo: <a href="https://github.com/JiajiaFeng18/Pstat134-Movie-Recommender-System.git " target="_blank" rel="noreferrer">link</a>
         </p>
       </section>
 
@@ -189,36 +211,68 @@
 
         <h3>Context</h3>
         <p>
-          <!-- Paste your context here -->
-          We used the NES-MDB dataset (Nintendo game soundtracks) to generate symbolic music with an LSTM.
-          The model predicts note sequences and outputs MIDI.
+          Given past notes, can we create a model that will predict the next note? Or if we feed it a melody, 
+          can it produce an according harmony? These were questions my group was tasked with in my Machine Learning for Music course I took at UCSD. 
+        </p>
+        
+        <p>
+          We wanted to explore symbolic generation of music, which produced MIDI files that we could then play out loud.
         </p>
 
         <h3>Approach</h3>
         <p>
-          <!-- Paste your approach here -->
-          We implemented unconditioned generation and extended to conditioned harmony generation by feeding
-          melody input and generating arpeggiated triads for a retro soundtrack feel.
+          We used the NES-MDB dataset, which contains songs from Nintendo game soundtracks. For our first unconditioned task,
+          we tokenize the songs and use an LSTM model to better capture long-term dependencies in the audio. The model predicts the 
+          next sequence of notes and outputs that as a MIDI file.
+        </p>
+        
+        <p>
+          Next, we input a randomly selected song and produce a harmony for its melody that follows music theory. 
+          The extracted note pitches in the melody are mapped to harmonic triads, which are generated as arpeggios, 
+          since those are common in video game soundtracks. The final MIDI file combines the melody and arpeggios harmony.
         </p>
 
         <h3>Results</h3>
         <p>
-          <!-- Paste your results here -->
-          The LSTM outperformed a Markov chain baseline for unconditioned generation, and the harmonization
-          preserved timing while following basic music theory.
+          For the unconditioned task, we found that the LSTM model outperformed the baseline model (Markov Chain model) on almost every metric. 
+        </p>
+        
+        <div class="media">
+          <img src="assets/project-images/unconditional-lstm-results.png" alt="Top 10 Movie Recommendations for 'The Gorge'" />
+        </div>
+
+        <p>
+          While for the conditional harmony task, our baseline was the melody only version, and the harmonized MIDI was able to 
+          add depth, preserve timing, and follow basic music theory.
+        </p>
+        
+        <div class="media">
+          <img src="assets/project-images/piano-roll.png" alt="Melody/arpeggio piano roll" />
+        </div>
+
+        <p>
+          This snapshot of the piano roll shows how the harmony adds density and vertical texture to the melody. It's also clear
+          that the harmony follows the melody rhythm, but is also slightly staggered due to the arpeggio pattern.
+        </p>
+
+        <div class="media">
+          <img src="assets/project-images/pitch-distribution.png" alt="Pitch distribution chart" />
+        </div>
+
+        <p>
+          Another chart here shows a clear difference between harmony and melody due to the fact that harmony introduces lower pitches.
+        </p>
+
+        <p>
+          Listen to our generated clips <u>here</u>.
         </p>
 
         <h3>Next Steps</h3>
         <ul>
-          <li>Extend the symbolic representation to include rhythm and expressive dynamics.</li>
-          <li>Compare LSTM models with transformer-based architectures.</li>
-          <li>Develop evaluation methods that better align with human listening judgments.</li>
+          <li>Explore new transformer based models with attention features for longer duration music</li>
+          <li>Improve note representations by adding velocity, rhythmic structure, articulations</li>
+          <li>Improve evaluation metrics beyond just perplexity</li>
         </ul>
-
-        <div class="media">
-          <img src="assets/project-images/music-generation-plot.png" alt="Music generation evaluation plots" />
-        </div>
-      </section>
 
       <!-- VOTER DATA ANALYSIS -->
       <section id="voter-analysis" class="section project">
@@ -226,35 +280,52 @@
 
         <h3>Context</h3>
         <p>
-          <!-- Paste your context here -->
-          Voting is central to democracy, but turnout varies across regions and demographics. We worked with
-          large-scale voter files to explore turnout patterns and potential contributing factors.
+          Voting is essential to democracy, yet turnout varies widely across regions and demographic groups. 
+          We need to understand who participates in elections, and how consistently, in order to reach a solution. 
+        </p>
+        
+        <p>
+          This project explores large-scale voter file data to better understand patterns in voter turnout over time and 
+          across different regions. We aim to use data at scale to uncover meaningful trends that might inform future 
+          research or decision making in politics.
         </p>
 
         <h3>Approach</h3>
         <p>
-          <!-- Paste your approach here -->
-          We cleaned, transformed, and analyzed large datasets and created visualizations (including maps)
-          to interpret patterns in turnout and affiliation.
+          We worked with the U.S. national voter file, a large dataset containing demographic, geographic, 
+          and voting history information for registered voters across all states. Because of the scale of the data, 
+          we used BigQuery and SQL for querying, and Databricks for data exploration, visualization, and modeling.
+        </p>
+        
+        <p>
+          Using these platforms, we explored voter turnout trends over time, analyzed turnout across age groups, 
+          and examined geographic patterns at the county level. We also framed research questions around turnout 
+          disparities and built simple analytical models to better understand which factors are associated with voter participation.
         </p>
 
         <h3>Results</h3>
         <p>
-          <!-- Paste your results here -->
-          We found patterns in turnout across geography and demographics and identified factors associated
-          with participation differences.
+          We found that voter turnout has generally increased over time, but participation varies significantly 
+          by age group and location. Older voters consistently voted more often, while county level visualizations 
+          showed major geographic differences for both the turnout and the party affiliation.
         </p>
+
+        <div class="media">
+          <img src="assets/project-images/voter-turnout-over-time.png" alt="Line Plot for Voter Turnout" />
+        </div>
+
+        <div class="media">
+          <img src="assets/project-images/alaska-voter-map.png" alt="Alaska Voter Map by Party" />
+        </div>
 
         <h3>Next Steps</h3>
         <ul>
-          <li>Explore additional demographic and socioeconomic variables.</li>
-          <li>Expand analysis across multiple states/regions for comparison.</li>
-          <li>Investigate time trends and policy-relevant questions.</li>
+          <li>Explore turnout disparities across race, income, and housing characteristics</li>
+          <li>Continue building so the model becomes more robust and can more strongly identify factors most associated with voter participation</li>
+          <li>Expand the analysis across multiple states to compare regional trends</li>
         </ul>
 
-        <div class="media">
-          <img src="assets/project-images/voter-map.png" alt="Example voter map visualization" />
-        </div>
+
       </section>
 
       <!-- MUSIC GENRE CLASSIFICATION -->
@@ -263,35 +334,53 @@
 
         <h3>Context</h3>
         <p>
-          <!-- Paste your context here -->
-          This project explored whether audio features could be used to classify a song’s genre using
-          supervised ML models.
+          Behind the surface of every song lies a number of characteristics like pitch, tempo, or dynamics. 
+          The way a song makes you feel is based on the many features of that song, and people turn to different genres for different reasons.
+        </p>
+        
+        <p>
+          But how do you visualize and classify sound? This project aims to predict what genre a song is based on given 
+          characteristics about it. We want to find out: Can we leverage these musical attributes to be able to classify songs 
+          into their respective genres using a variety of machine learning models?
         </p>
 
         <h3>Approach</h3>
         <p>
-          <!-- Paste your approach here -->
-          We compared several models (e.g., Random Forest, Gradient Boosted Trees) and tuned hyperparameters
-          to improve performance.
+          This project uses the GTZAN dataset comprised of 1,000 songs total, with 100 audio files for each of the 10 
+          genres represented. This dataset has a number of features extracted from each audio file such as volume, distribution 
+          of pitches, complexity, etc. 
+        </p>
+
+        <p>
+          Four different ML models are fit on this data to explore what type of architecture would work best for this classification task. 
+          We explore a KNN, Linear Discriminant Analysis, Random Forest, and Gradient Boosted Tree model - all with cross validation and 
+          hyperparameter tuning to train and optimize the models.
         </p>
 
         <h3>Results</h3>
         <p>
-          <!-- Paste your results here -->
-          The best model achieved strong test accuracy and we analyzed misclassifications to understand
-          where the model struggled.
+          The best performing model was the Random Forest with an <b>accuracy of 82%</b> on the testing data. Followed closely by the 
+          Gradient Boosted Tree, which had an accuracy of 78.66% for test set predictions.
         </p>
-
-        <h3>Next Steps</h3>
-        <ul>
-          <li>Experiment with neural network models for richer representations.</li>
-          <li>Improve feature extraction and explore time-frequency features.</li>
-          <li>Use error analysis to guide targeted improvements.</li>
-        </ul>
 
         <div class="media">
           <img src="assets/project-images/genre-confusion-matrix.png" alt="Confusion matrix for genre classification" />
         </div>
+
+        <p>
+          We can also observe the confusion matrix for our best performing model, Random Forest. We can see that the highest number 
+          of misclassifications is between the genres rock and country. This gives us some ideas for future steps such as tuning 
+          hyperparameters differently or analyzing the specific features that led to these misclassifications in order to correct these errors.
+        </p>
+
+        <h3>Next Steps</h3>
+        <ul>
+          <li>Experiment with more advanced modes like Neural Networks or Support Vector Machines</li>
+          <li>Try classifying the audio file images provided by the dataset with a Convolutional Neural Network and see if accuracy improves</li>
+          <li>Explore feature engineering to see if transforming certain features improves predictions</li>
+        </ul>
+
+
       </section>
 
       <!-- EXPERIENCE -->
@@ -303,24 +392,27 @@
         </p>
 
         <p>
-          Alongside my project work, I’ve gained experience applying data science concepts in teaching,
-          advising, and community-oriented roles. For three years at UCSB, I worked as an Undergraduate
-          Learning Assistant for an Introduction to Data Science course, where I supported students in
-          understanding programming and statistical concepts through office hours, discussion sections,
-          and one-on-one debugging support.
+          Alongside my projects, I’ve gained experience applying data science concepts in teaching and advising roles as well. 
+          For three years at UCSB, I worked as an Undergraduate Learning Assistant for an Introduction to Data Science course. 
+          The bulk of my work there was to help students understand programming and statistical concepts through personalized help 
+          in office hours, discussion sections, and one on one debugging support.
         </p>
 
         <p>
-          I also served as a Peer Advisor for the Statistics and Applied Probability Department, providing
-          academic guidance to students and helping manage departmental data and resources. In addition,
-          I volunteered with UCSB Carpentries workshops, assisting in sessions on data analysis with R and
-          Python, GitHub, and workflow automation.
+          I also worked as a Peer Advisor for the Statistics and Applied Probability department where I provided academic 
+          support and guidance to students and managed department databases. 
         </p>
 
         <p>
-          Across these roles, I developed a strong appreciation for clear communication, mentorship, and
-          making technical material accessible to diverse audiences.
+          In addition, I volunteered as a  helper for the workshops hosted by the UCSB Carpentries organization. 
+          I assisted with student workshops on Data Analysis with R and Python, GitHub, and Automation and Make. 
         </p>
+
+        <p>
+          Across these roles, I developed a strong appreciation for clear communication, mentorship, and making technical 
+          material accessible to diverse audiences. 
+        </p>
+        
       </section>
 
       <!-- INTERESTS -->
@@ -328,20 +420,18 @@
         <h2 class="page-title">Interests</h2>
 
         <p>
-          Through my projects and coursework, I’ve developed a strong interest in exploring the intersection
-          of data and creativity. I especially enjoy working with audio and media data, and in an ideal world
-          would continue to build in that space.
+          Throughout my projects and coursework, I have discovered a strong interest for exploring the intersection of data and creativity. 
+          I especially enjoy working with audio and media data, and in an ideal world would continue to grow into that space. 
         </p>
 
         <p>
-          I’m also drawn to the communication side of data science — I find data visualization particularly
-          compelling, and I think strong storytelling is a powerful and often underrated skill within technical work.
+          I also have a knack for the communication side of data science - I think data visualization is really inspiring and that strong 
+          storytelling abilities are a powerful and often underrated skill within technical work.
         </p>
 
         <p>
-          While many of my current interests lie in the entertainment and creative technology space, I’m broadly
-          excited by analytical roles that tackle meaningful, real-world problems, including applications in health,
-          language, and emerging technologies.
+          While many of my current interests lie in the entertainment and creative technology space, I am broadly excited by analytical roles as well. 
+          Those that tackle meaningful, real world problems - particularly in areas like health, language, and emerging technologies.
         </p>
       </section>
 
