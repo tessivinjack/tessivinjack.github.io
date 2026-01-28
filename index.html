@@ -1,182 +1,359 @@
-/* Basic reset */
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #111;
-  background: #f3f3f3;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tess Ivinjack | Portfolio</title>
+  <meta name="description" content="Tess Ivinjack — data scientist passionate about creativity, communication, and real-world impact." />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-/* Layout */
-.layout {
-  display: flex;
-  min-height: 100vh;
-}
+<body>
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <!-- Replace with your actual image file in /assets -->
+        <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Tess Ivinjack" />
 
-/* Sidebar */
-.sidebar {
-  width: 280px;
-  background: #fff;
-  border-right: 1px solid #e6e6e6;
-  padding: 24px 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+        <h1 class="name">Tess Ivinjack</h1>
+        <p class="tagline">Data scientist passionate about creativity, communication, and real-world impact.</p>
 
-.headshot {
-  width: 90px;
-  height: 90px;
-  border-radius: 6px;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 12px;
-}
+        <h2 class="sidebar-title">Outline</h2>
+        <nav class="nav">
+          <a href="#introduction">Introduction</a>
+          <a href="#projects">Projects</a>
+          <a class="nav-indent" href="#sound-ethics">Sound Ethics Capstone</a>
+          <a class="nav-indent" href="#movie-recommender">Movie Recommender System</a>
+          <a class="nav-indent" href="#music-generation">Music Generation Project</a>
+          <a class="nav-indent" href="#voter-analysis">Voter Data Analysis</a>
+          <a class="nav-indent" href="#genre-classification">Music Genre Classification</a>
+          <a href="#experience">Experience</a>
+          <a href="#interests">Interests</a>
+        </nav>
+      </div>
 
-.name {
-  font-size: 28px;
-  line-height: 1.05;
-  margin: 8px 0 8px;
-}
+      <div class="sidebar-bottom">
+        <!-- Replace with your real LinkedIn -->
+        <a class="link" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>
+        <!-- Optional: add email/GitHub later -->
+      </div>
+    </aside>
 
-.tagline {
-  font-size: 13px;
-  line-height: 1.4;
-  margin: 0 0 18px;
-  color: #333;
-}
+    <!-- MAIN -->
+    <main class="content">
+      <!-- INTRODUCTION -->
+      <section id="introduction" class="section">
+        <h2 class="page-title">A little about me</h2>
 
-.sidebar-title {
-  font-size: 18px;
-  margin: 16px 0 10px;
-}
+        <p>
+          Hi! I’m Tess Ivinjack — a recent UCSB graduate with a B.S. in Statistics &amp; Data Science.
+          Welcome to my portfolio.
+        </p>
 
-.nav a {
-  display: block;
-  text-decoration: none;
-  color: #111;
-  font-size: 13px;
-  padding: 5px 0;
-}
+        <p>
+          Across my projects, you’ll notice a few recurring themes. I’m especially interested in exploring the
+          intersection of data, AI, and creativity, with a focus on areas like music, language, and emerging
+          technologies. I’m most excited by opportunities where I can use data to solve real-world problems
+          while continuing to grow as a creative thinker and collaborator.
+        </p>
 
-.nav a:hover {
-  text-decoration: underline;
-}
+        <p>
+          I’m also drawn to the communication side of data science — explaining concepts clearly, building
+          intuitive visualizations, and turning complex information into something approachable and actionable.
+          I love learning, meeting new people, and staying open to new paths as I build new skills along the way.
+        </p>
 
-.nav-indent {
-  padding-left: 14px;
-  color: #333;
-}
+        <p>
+          Outside of data, other things I love include peanut butter, movies, the color yellow, and dance :)
+        </p>
+      </section>
 
-.sidebar-bottom .link {
-  font-size: 12px;
-  text-decoration: none;
-  color: #111;
-}
+      <!-- PROJECTS OVERVIEW -->
+      <section id="projects" class="section">
+        <h2 class="page-title">Projects</h2>
 
-.sidebar-bottom .link:hover {
-  text-decoration: underline;
-}
+        <div class="project-grid">
+          <a class="project-card" href="#sound-ethics">
+            <div class="thumb">Spectrogram / poster</div>
+            <h3>Sound Ethics Capstone</h3>
+            <p>AI Gen Music Classification</p>
+          </a>
 
-/* Content */
-.content {
-  flex: 1;
-  padding: 34px 38px;
-  max-width: 980px;
-}
+          <a class="project-card" href="#movie-recommender">
+            <div class="thumb">Film / recs</div>
+            <h3>Movie Recommender System</h3>
+            <p>Hybrid recommender for movie watchers</p>
+          </a>
 
-.section {
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  padding: 28px 30px;
-  margin-bottom: 22px;
-}
+          <a class="project-card" href="#music-generation">
+            <div class="thumb">MIDI roll</div>
+            <h3>Music Generation Project</h3>
+            <p>Symbolic music generation</p>
+          </a>
 
-.page-title {
-  font-size: 34px;
-  margin: 0 0 16px;
-}
+          <a class="project-card" href="#voter-analysis">
+            <div class="thumb">Voter map</div>
+            <h3>Voter Data Analysis</h3>
+            <p>Large scale analysis of voter files</p>
+          </a>
 
-.section h3 {
-  margin-top: 20px;
-  margin-bottom: 8px;
-  font-size: 16px;
-}
+          <a class="project-card" href="#genre-classification">
+            <div class="thumb">Confusion matrix</div>
+            <h3>Music Genre Classification</h3>
+            <p>Detecting a song’s genre</p>
+          </a>
+        </div>
+      </section>
 
-.section p {
-  margin: 0 0 12px;
-  line-height: 1.6;
-}
+      <!-- SOUND ETHICS -->
+      <section id="sound-ethics" class="section project">
+        <h2 class="page-title">Sound Ethics Capstone</h2>
 
-.small {
-  font-size: 12px;
-  color: #333;
-}
+        <h3>Context</h3>
+        <p>
+          <!-- Paste your finalized writeup text here -->
+          Question: Given a song, is it AI-generated or authentic? That was the question my capstone group
+          tried to answer by building a detection model for our year-long project.
+        </p>
 
-/* Projects grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
-  gap: 18px;
-}
+        <h3>Approach</h3>
+        <p>
+          <!-- Paste your finalized approach here -->
+          After reading research papers, we found generalization was a key challenge and expanded our dataset
+          by generating additional music from multiple generators, then fine-tuned a classifier from scratch.
+        </p>
 
-.project-card {
-  border: 1px solid #e6e6e6;
-  padding: 16px;
-  text-decoration: none;
-  color: #111;
-  background: #fff;
-}
+        <h3>Results</h3>
+        <p>
+          <!-- Paste your results here -->
+          Our generalized model improved substantially over the original baseline and performed well on
+          previously unseen generators.
+        </p>
 
-.project-card:hover {
-  border-color: #cfcfcf;
-}
+        <h3>Next Steps</h3>
+        <ul>
+          <li>Continue expanding the dataset to improve generalization.</li>
+          <li>Explore finer-grained detection (e.g., identifying AI-generated segments).</li>
+          <li>Deploy the classifier for broader use by artists and platforms.</li>
+        </ul>
 
-.thumb {
-  width: 100%;
-  height: 140px;
-  background: #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #444;
-  font-size: 12px;
-  margin-bottom: 12px;
-}
+        <!-- Replace with your image(s) in assets/ -->
+        <div class="media">
+          <img src="assets/project-images/sound-ethics-poster.png" alt="Sound Ethics project poster" />
+        </div>
+      </section>
 
-.project-card h3 {
-  margin: 8px 0 6px;
-  font-size: 16px;
-}
+      <!-- MOVIE RECOMMENDER -->
+      <section id="movie-recommender" class="section project">
+        <h2 class="page-title">Movie Recommender System</h2>
 
-.project-card p {
-  margin: 0;
-  color: #333;
-  font-size: 13px;
-}
+        <h3>Context</h3>
+        <p>
+          <!-- Paste your context here -->
+          People have different tastes, and you don’t know whether a movie is “good” until you watch it.
+          This project focused on recommending similar movies based on what a user already likes.
+        </p>
 
-/* Media */
-.media {
-  margin-top: 14px;
-}
+        <h3>Approach</h3>
+        <p>
+          <!-- Paste your approach here -->
+          Using data from the TMDb API, we built a hybrid system: content-based recommendations for cold-start
+          movies and collaborative filtering for movies with reviews.
+        </p>
 
-.media img {
-  width: 100%;
-  max-width: 760px;
-  border: 1px solid #e6e6e6;
-  display: block;
-}
+        <h3>Results</h3>
+        <p>
+          <!-- Paste your results here -->
+          The system produced reasonable recommendations in qualitative tests, and the hybrid approach helped
+          address the cold-start problem.
+        </p>
 
-/* Footer */
-.footer {
-  padding: 10px 0 30px;
-}
+        <h3>Next Steps</h3>
+        <ul>
+          <li>Incorporate additional content signals (e.g., production companies, keywords).</li>
+          <li>Expand review coverage by integrating additional sources.</li>
+          <li>Refine feature weighting and evaluate with user feedback.</li>
+        </ul>
 
-/* Mobile */
-@media (max-width: 900px) {
-  .layout { flex-direction: column; }
-  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e6e6e6; }
-  .content { padding: 18px; }
-  .project-grid { grid-template-columns: 1fr; }
-}
+        <p class="small">
+          GitHub repo: <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noreferrer">link</a>
+        </p>
+      </section>
+
+      <!-- MUSIC GENERATION -->
+      <section id="music-generation" class="section project">
+        <h2 class="page-title">Symbolic Music Generation</h2>
+
+        <h3>Context</h3>
+        <p>
+          <!-- Paste your context here -->
+          We used the NES-MDB dataset (Nintendo game soundtracks) to generate symbolic music with an LSTM.
+          The model predicts note sequences and outputs MIDI.
+        </p>
+
+        <h3>Approach</h3>
+        <p>
+          <!-- Paste your approach here -->
+          We implemented unconditioned generation and extended to conditioned harmony generation by feeding
+          melody input and generating arpeggiated triads for a retro soundtrack feel.
+        </p>
+
+        <h3>Results</h3>
+        <p>
+          <!-- Paste your results here -->
+          The LSTM outperformed a Markov chain baseline for unconditioned generation, and the harmonization
+          preserved timing while following basic music theory.
+        </p>
+
+        <h3>Next Steps</h3>
+        <ul>
+          <li>Extend the symbolic representation to include rhythm and expressive dynamics.</li>
+          <li>Compare LSTM models with transformer-based architectures.</li>
+          <li>Develop evaluation methods that better align with human listening judgments.</li>
+        </ul>
+
+        <div class="media">
+          <img src="assets/project-images/music-generation-plot.png" alt="Music generation evaluation plots" />
+        </div>
+      </section>
+
+      <!-- VOTER DATA ANALYSIS -->
+      <section id="voter-analysis" class="section project">
+        <h2 class="page-title">Voter Data Analysis</h2>
+
+        <h3>Context</h3>
+        <p>
+          <!-- Paste your context here -->
+          Voting is central to democracy, but turnout varies across regions and demographics. We worked with
+          large-scale voter files to explore turnout patterns and potential contributing factors.
+        </p>
+
+        <h3>Approach</h3>
+        <p>
+          <!-- Paste your approach here -->
+          We cleaned, transformed, and analyzed large datasets and created visualizations (including maps)
+          to interpret patterns in turnout and affiliation.
+        </p>
+
+        <h3>Results</h3>
+        <p>
+          <!-- Paste your results here -->
+          We found patterns in turnout across geography and demographics and identified factors associated
+          with participation differences.
+        </p>
+
+        <h3>Next Steps</h3>
+        <ul>
+          <li>Explore additional demographic and socioeconomic variables.</li>
+          <li>Expand analysis across multiple states/regions for comparison.</li>
+          <li>Investigate time trends and policy-relevant questions.</li>
+        </ul>
+
+        <div class="media">
+          <img src="assets/project-images/voter-map.png" alt="Example voter map visualization" />
+        </div>
+      </section>
+
+      <!-- MUSIC GENRE CLASSIFICATION -->
+      <section id="genre-classification" class="section project">
+        <h2 class="page-title">Music Genre Classification</h2>
+
+        <h3>Context</h3>
+        <p>
+          <!-- Paste your context here -->
+          This project explored whether audio features could be used to classify a song’s genre using
+          supervised ML models.
+        </p>
+
+        <h3>Approach</h3>
+        <p>
+          <!-- Paste your approach here -->
+          We compared several models (e.g., Random Forest, Gradient Boosted Trees) and tuned hyperparameters
+          to improve performance.
+        </p>
+
+        <h3>Results</h3>
+        <p>
+          <!-- Paste your results here -->
+          The best model achieved strong test accuracy and we analyzed misclassifications to understand
+          where the model struggled.
+        </p>
+
+        <h3>Next Steps</h3>
+        <ul>
+          <li>Experiment with neural network models for richer representations.</li>
+          <li>Improve feature extraction and explore time-frequency features.</li>
+          <li>Use error analysis to guide targeted improvements.</li>
+        </ul>
+
+        <div class="media">
+          <img src="assets/project-images/genre-confusion-matrix.png" alt="Confusion matrix for genre classification" />
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section">
+        <h2 class="page-title">Experience</h2>
+
+        <p class="small">
+          Resume/CV: <a href="assets/Tess_Ivinjack_Resume.pdf" target="_blank" rel="noreferrer">Download PDF</a>
+        </p>
+
+        <p>
+          Alongside my project work, I’ve gained experience applying data science concepts in teaching,
+          advising, and community-oriented roles. For three years at UCSB, I worked as an Undergraduate
+          Learning Assistant for an Introduction to Data Science course, where I supported students in
+          understanding programming and statistical concepts through office hours, discussion sections,
+          and one-on-one debugging support.
+        </p>
+
+        <p>
+          I also served as a Peer Advisor for the Statistics and Applied Probability Department, providing
+          academic guidance to students and helping manage departmental data and resources. In addition,
+          I volunteered with UCSB Carpentries workshops, assisting in sessions on data analysis with R and
+          Python, GitHub, and workflow automation.
+        </p>
+
+        <p>
+          Across these roles, I developed a strong appreciation for clear communication, mentorship, and
+          making technical material accessible to diverse audiences.
+        </p>
+      </section>
+
+      <!-- INTERESTS -->
+      <section id="interests" class="section">
+        <h2 class="page-title">Interests</h2>
+
+        <p>
+          Through my projects and coursework, I’ve developed a strong interest in exploring the intersection
+          of data and creativity. I especially enjoy working with audio and media data, and in an ideal world
+          would continue to build in that space.
+        </p>
+
+        <p>
+          I’m also drawn to the communication side of data science — I find data visualization particularly
+          compelling, and I think strong storytelling is a powerful and often underrated skill within technical work.
+        </p>
+
+        <p>
+          While many of my current interests lie in the entertainment and creative technology space, I’m broadly
+          excited by analytical roles that tackle meaningful, real-world problems, including applications in health,
+          language, and emerging technologies.
+        </p>
+      </section>
+
+      <footer class="footer">
+        <p class="small">© <span id="year"></span> Tess Ivinjack</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Set footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
