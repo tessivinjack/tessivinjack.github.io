@@ -31,8 +31,6 @@ body {
   border-radius: 8px;
   object-fit: contain; 
   display: block;
-  margin-bottom: 12px;
-  border: 1px solid #e6e6e6;
   margin: 0 auto 14px; 
 }
 
