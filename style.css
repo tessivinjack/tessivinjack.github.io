@@ -26,8 +26,8 @@ body {
 }
 
 .headshot {
-  width: 140px;
-  height: 155px;  
+  width: 125px;
+  height: 140px;  
   border-radius: 8px;
   object-fit: contain; 
   display: block;
