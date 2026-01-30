@@ -110,6 +110,12 @@ body {
   content: "▾";
 }
 
+.nav a.active,
+.nav-details summary.active {
+  font-weight: 700;
+}
+
+
 
 /* Content */
 .content {
