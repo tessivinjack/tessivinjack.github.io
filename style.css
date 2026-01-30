@@ -17,8 +17,8 @@ body {
 /* Sidebar */
 .sidebar {
   position: sticky;
-  top: 16px;
-  height: calc(100vh - 16px);
+  top: 0;
+  height: 100vh;
   overflow-y: auto;
 }
 
