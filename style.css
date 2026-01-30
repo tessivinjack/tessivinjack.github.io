@@ -29,6 +29,9 @@ body {
   border-right: 1px solid #e6e6e6;
 }
 
+.sidebar-top {
+  max-width: 100%;
+}
 
 .headshot {
   width: 130px;
@@ -50,6 +53,9 @@ body {
   line-height: 1.4;
   margin: 0 0 18px;
   color: #333;
+
+  max-width: 220px;  
+  white-space: normal; 
 }
 
 .sidebar-title {
