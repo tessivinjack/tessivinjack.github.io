@@ -79,6 +79,38 @@ body {
   text-decoration: underline;
 }
 
+/* Collapsible nav styling */
+.nav-details {
+  margin: 6px 0;
+}
+
+.nav-details summary {
+  list-style: none;           /* removes default marker in some browsers */
+  cursor: pointer;
+  font-size: 13px;
+  padding: 5px 0;
+  color: #111;
+}
+
+.nav-details summary::-webkit-details-marker {
+  display: none;             
+}
+
+/* Optional: add your own subtle caret */
+.nav-details summary::after {
+  content: "▸";
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 12px;
+  color: #555;
+  transform: translateY(-1px);
+}
+
+.nav-details[open] summary::after {
+  content: "▾";
+}
+
+
 /* Content */
 .content {
   flex: 1;
