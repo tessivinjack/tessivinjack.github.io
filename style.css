@@ -42,12 +42,12 @@ body {
 }
 
 .headshot {
-  width: 130px;
-  height: 140px;  
+  width: 145px;
+  height: 175px;  
   border-radius: 8px;
   object-fit: contain; 
   display: block;
-  margin: 0 auto 14px; 
+  margin: 0 0 14px 0;
 }
 
 .name {
