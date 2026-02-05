@@ -24,7 +24,7 @@ body {
 
   width: 280px;      
   flex-shrink: 0;    
-  padding: 24px 18px;
+  padding: 24px 18px 24px 24px;
   background: #fff;
   border-right: 1px solid #e6e6e6;
 
@@ -84,8 +84,17 @@ body {
 }
 
 .nav-indent {
-  padding-left: 14px;
+  padding-left: 18px;
   color: #333;
+  font-size: 12.5px;
+  position: relative;
+}
+
+.nav-indent::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #aaa;
 }
 
 .sidebar-bottom .link {
@@ -253,7 +262,7 @@ body {
 /* Mobile */
 @media (max-width: 900px) {
   .layout { flex-direction: column; }
-  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e6e6e6; }
+  .sidebar { padding: 20px 18px 20px 24px; }
   .content { padding: 18px; }
   .project-grid { grid-template-columns: 1fr; }
 }
