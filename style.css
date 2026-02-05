@@ -147,7 +147,11 @@ body {
   background: #fff;
   border: 1px solid #e6e6e6;
   padding: 28px 30px;
-  margin-bottom: 22px;
+  margin: 0 0 24px 0; 
+}
+
+.content .section:last-of-type {
+  margin-bottom: 0;
 }
 
 .page-title {
