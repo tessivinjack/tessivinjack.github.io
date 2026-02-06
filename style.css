@@ -12,6 +12,7 @@ body {
 .layout {
   display: flex;
   min-height: 100vh;
+  padding-left: 16px;
 }
 
 /* Sidebar */
@@ -275,7 +276,10 @@ body {
 
 /* Mobile */
 @media (max-width: 900px) {
-  .layout { flex-direction: column; }
+  .layout {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .sidebar { padding: 20px 18px 20px 24px; }
   .content { padding: 18px; }
   .project-grid { grid-template-columns: 1fr; }
