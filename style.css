@@ -83,14 +83,17 @@ body {
   text-decoration: underline;
 }
 
-.nav-indent {
+.nav-details a.nav-indent {
+  display: block;
   padding-left: 20px;
-  color: #444;
+  color: #333;
   font-size: 12.5px;
   position: relative;
+  line-height: 1.4;
 }
 
 .nav-details summary {
+  padding-left: 0;
   font-weight: 600;
 }
 
@@ -147,9 +150,13 @@ body {
 }
 
 .icon {
-  width: 14px;
-  height: 14px;
+  width: 17px;
+  height: 17px;
   fill: currentColor;
+}
+
+.link-icon:hover {
+  opacity: 0.75;
 }
 
 /* Content */
