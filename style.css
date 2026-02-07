@@ -85,6 +85,11 @@ body {
   text-decoration: underline;
 }
 
+.nav a:hover,
+.nav-details summary:hover {
+  opacity: 0.7;
+}
+
 .nav-details a.nav-indent {
   display: block;
   padding-left: 20px;
